@@ -1,9 +1,8 @@
-import com.sun.tools.javac.util.Assert;
-
 public class App {
     public static void main( String[] args ) {
         int x = 100;
-        org.example.App.maxNumber(40, x, 60);
+        findMaxElement(x, 10);
+        maxNumber(40, x, 60);
     }
 
     public static void findMaxElement(int elem1, int elem2) {
@@ -19,5 +18,46 @@ public class App {
         System.out.println( "Max = " + (Math.max(elem1, elem2)) );
 
         System.out.println( "Max = " + max );
+    }
+
+    public static int maxNumber(int number1, int number2, int number3) {
+        int max = number1;
+        if (number1 > number2) {
+            if (number1 > number3){
+                max = number1;
+            } else {
+                max = number3;
+            }
+        } else {
+            if (number2 > number3) {
+                max = number2;
+            } else {
+                max = number3;
+            }
+        }
+        System.out.printf("Самое большое число - %d\n", max);
+        return max;
+    }
+
+    public static int maxNumber2(int number1, int number2, int number3) {
+        int max = number1;
+
+        max = (number1 > number2) ? number1 : number2;
+
+        max = (max < number3) ? number3 : max;
+
+        System.out.printf("Самое большое число - %d\n", max);
+        return max;
+    }
+
+    public static int maxNumber3(int number1, int number2, int number3) {
+        int max = number1;
+
+        max = Math.max(number1, number2);
+
+        max = Math.max(max, number3);
+
+        System.out.printf("Самое большое число - %d\n", max);
+        return max;
     }
 }
