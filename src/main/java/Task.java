@@ -9,7 +9,7 @@ public class Task {
         //если elem1 меньше elem2
         if (elem1 > elem2) {
             //то elem2 - max
-            max = elem2;
+            max = elem1;
         }
         //иначе elem1 - max
 

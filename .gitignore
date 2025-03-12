@@ -37,3 +37,6 @@ build/
 ### Mac OS ###
 .DS_Store
 /.idea/shelf/Uncommitted_changes_before_Update_at_03_03_2025_19_22__Changes_.xml
+
+.idea
+.idea/

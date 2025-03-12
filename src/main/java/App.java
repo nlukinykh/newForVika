@@ -1,12 +1,10 @@
-import com.sun.tools.javac.util.Assert;
-
 public class App {
     public static void main( String[] args ) {
         int x = 100;
-        org.example.App.maxNumber(40, x, 60);
+        maxNumber(40, x, 60);
     }
 
-    public static void findMaxElement(int elem1, int elem2) {
+    public static int findMaxElement(int elem1, int elem2) {
         int max = 0;
         //если elem1 меньше elem2
         if (elem1 < elem2) {
@@ -16,8 +14,26 @@ public class App {
             max = elem1;
             //иначе elem1 - max
         }
-        System.out.println( "Max = " + (Math.max(elem1, elem2)) );
 
-        System.out.println( "Max = " + max );
+        return max;
+    }
+
+    public static int maxNumber(int number1, int number2, int number3) {
+        int max = number1;
+        if (number1 > number2) {
+            if (number1 > number3){
+                max = number1;
+            } else {
+                max = number3;
+            }
+        } else {
+            if (number2 > number3) {
+                max = number2;
+            } else {
+                max = number3;
+            }
+        }
+        System.out.printf("The largest number is %d%n", max);
+        return max;
     }
 }
